@@ -1,0 +1,202 @@
+*{
+    overflow: hidden;
+}
+
+body {
+    height: 100vh;
+  }
+  @import url('https://fonts.googleapis.com/css?family=Tangerine');
+  canvas{position:absolute;z-index:0;width:100%;}
+
+  .smoke {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    animation:fade 13s;
+  }
+  @keyframes fade{
+    0%{opacity:0}
+    100%{opacity:1}
+  }
+  .smoke span {
+  
+    position: relative;
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: bold;
+    letter-spacing: 10px;
+  font-family: 'Tangerine', cursive;
+    font-size: 2.5em;
+  animation: animate 6s cubic-bezier(0, 0.98, 0.58, 1) infinite;
+  
+  }
+  
+  .smoke span:nth-child(1) {
+    animation-delay: 0s;
+    color:#b61b1b
+  
+  }
+  .smoke span:nth-child(2) {
+    animation-delay: 0.1s;
+   
+  }
+  .smoke span:nth-child(3) {
+    animation-delay: 0.2s;
+    color:#b61b1b
+   
+  }
+  .smoke span:nth-child(4) {
+    animation-delay: 0.3s; 
+  }
+  
+  @keyframes fade{
+    0%{opacity:0}
+    100%{opacity:1}
+  }
+
+  @keyframes animate {
+    0%
+    {
+      filter: blur(0);
+    }
+    0%
+    {
+      filter: blur(0);
+    }
+    40%
+    { 
+      filter: blur(20px);
+    }
+    80%
+    {
+      filter: blur(0);
+    }
+    100%
+    {
+      filter: blur(0);
+    }
+  }
+
+  .buttons {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 20px;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 1.5em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #b61b1b;
+    color: white;
+    transition: background-color 0.3s;
+  }
+
+  button:hover {
+    background-color: #8e1414;
+  }
+
+  .flower {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: url('roses.png') no-repeat center center;
+    background-size: contain;
+    animation: fall 3s linear;
+  }
+
+  @keyframes fall {
+    0% {
+      transform: translateY(-100px) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
+
+  .love-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Tangerine', cursive;
+    font-size: 4em;
+    color: #ff69b4; /* Changed color */
+    opacity: 0;
+  }
+
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  .sad-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Tangerine', cursive;
+    font-size: 4em;
+    color: #0000ff; /* Blue color for sadness */
+    opacity: 0;
+    animation: shake 0.5s infinite;
+  }
+
+  @keyframes shake {
+    0% { transform: translate(-50%, -50%) translateX(0); }
+    25% { transform: translate(-50%, -50%) translateX(-10px); }
+    50% { transform: translate(-50%, -50%) translateX(10px); }
+    75% { transform: translate(-50%, -50%) translateX(-10px); }
+    100% { transform: translate(-50%, -50%) translateX(0); }
+  }
+
+  .tear {
+    display: none; /* Hide tear drops */
+  }
+
+  .broken-heart {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    background: url('broken-heart.png') no-repeat center center;
+    background-size: contain;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+  }
+
+  .chat-button {
+    position: absolute;
+    top: 80%; /* Match the position of the "yes" button */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 5px 10px; /* Reduced size */
+    font-size: 1em; /* Reduced font size */
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff0000; /* Red color */
+    color: white;
+    transition: background-color 0.3s;
+    display: none; /* Initially hidden */
+  }
+
+  .chat-button:hover {
+    background-color: #cc0000; /* Darker red */
+  }
+
