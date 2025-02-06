@@ -222,7 +222,7 @@ document.getElementById('yesButton').addEventListener('click', () => {
     chatButton.className = 'chat-button';
     chatButton.innerText = 'Chat';
     chatButton.onclick = () => {
-        window.location.href = 'https://wa.me/+918355829388?text=Date%20pe%20kaha%20chalogee....'; // Replace with your WhatsApp number
+        window.location.href = 'https://wa.me/+918657101445?text=Date%20pe%20kaha%20chalogee....'; // Replace with your WhatsApp number
     };
     document.body.appendChild(chatButton);
     chatButton.style.display = 'block';
